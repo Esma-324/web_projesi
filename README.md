@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# BEUShareBox 📦
 
-# Run and deploy your AI Studio app
+BEUShareBox, kullanıcıların ürünlerini paylaşabildiği, diğer kullanıcıların paylaşımlarını beğenebildiği ve yorum yapabildiği modern bir mini sosyal medya platformudur. Bu proje, saf (vanilla) web teknolojileri kullanılarak geliştirilmiş bir sınıf projesidir.
 
-This contains everything you need to run your app locally.
+## 🚀 Özellikler
 
-View your app in AI Studio: https://ai.studio/apps/2ce2f1e8-cfa3-486f-bae7-f46e8aa8d75c
+- **Ürün Paylaşımı:** Başlık, açıklama, fiyat, kategori ve görsel URL'si ile yeni ürünler ekleyin.
+- **Görsel Desteği:** Ürünlerinize özel görseller ekleyin veya otomatik rastgele görsellerin keyfini çıkarın.
+- **Beğeni Sistemi:** Beğendiğiniz ürünlere kalp bırakın ve toplam beğeni sayısını takip edin.
+- **Yorum Sistemi:** Her ürünün altında diğer kullanıcılarla etkileşime geçin.
+- **Akıllı Filtreleme:** Ürünleri kategorilerine göre anında filtreleyin.
+- **Hızlı Arama:** Başlık veya açıklama üzerinden ürünler arasında arama yapın.
+- **Veri Kalıcılığı:** `localStorage` sayesinde tarayıcıyı kapatsanız bile verileriniz kaybolmaz.
+- **Dinamik İstatistikler:** Toplam ürün ve beğeni sayılarını anlık olarak görün.
+- **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarla tam uyumlu modern arayüz.
 
-## Run Locally
+## 🛠️ Kullanılan Teknolojiler
 
-**Prerequisites:**  Node.js
+- **HTML5:** Semantik ve erişilebilir yapı.
+- **CSS3:** Modern grid/flexbox düzeni, CSS değişkenleri ve gelişmiş animasyonlar.
+- **Vanilla JavaScript:** Framework kullanmadan modüler ve temiz kod yapısı.
+- **Vite:** Hızlı geliştirme ve derleme süreci için.
 
+## 📦 Kurulum ve Çalıştırma
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Projeyi yerel ortamınızda çalıştırmak için şu adımları izleyin:
+
+1. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
+   ```
+
+2. Geliştirme sunucusunu başlatın:
+   ```bash
+   npm run dev
+   ```
+
+3. Tarayıcınızda `http://localhost:3000` adresine gidin.
+
+## 📝 Teknik Detaylar
+
+- Veriler tarayıcı hafızasında (`localStorage`) JSON formatında saklanır.
+- Ürün görselleri için varsayılan olarak `picsum.photos` servisi kullanılır.
+- Arama ve filtreleme işlemleri JavaScript `Array.filter()` metodu ile performanslı bir şekilde yapılır.
+- Arayüz, modern tasarım trendlerine uygun olarak yumuşak gölgeler ve geçiş efektleri ile süslenmiştir.
+
+---
+*Bu proje bir eğitim çalışmasıdır.*
