@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEUShareBox - Ürün Paylaşım Platformu</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>BEUShareBox</h1>
+      <p>Ürünlerini paylaş, beğen ve yorum yap!</p>
+      <div class="stats-bar">
+        <span>Toplam Ürün: <span id="totalProducts">0</span></span>
+        <span>Toplam Beğeni: <span id="totalLikes">0</span></span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Ürün Ekleme Formu -->
+      <section class="form-section">
+        <h2>Yeni Ürün Paylaş</h2>
+        <form id="productForm">
+          <div class="form-group">
+            <label for="title">Ürün Başlığı</label>
+            <input type="text" id="title" placeholder="Örn: Kablosuz Kulaklık" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Fiyat (TL)</label>
+            <input type="number" id="price" placeholder="0.00" step="0.01" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Kategori</label>
+            <select id="category" required>
+              <option value="" disabled selected>Seçiniz...</option>
+              <option value="Elektronik">Elektronik</option>
+              <option value="Moda">Moda</option>
+              <option value="Ev & Yaşam">Ev & Yaşam</option>
+              <option value="Spor">Spor</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="imageUrl">Görsel URL</label>
+            <input type="url" id="imageUrl" placeholder="https://picsum.photos/400/300">
+          </div>
+          <div class="form-group full-width">
+            <label for="description">Açıklama</label>
+            <textarea id="description" rows="3" placeholder="Ürün hakkında kısa bilgi..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Ürünü Paylaş</button>
+        </form>
+      </section>
+
+      <!-- Filtreleme ve Arama -->
+      <section class="controls-section">
+        <div class="filter-box">
+          <label for="categoryFilter">Kategori Filtrele:</label>
+          <select id="categoryFilter">
+            <option value="all">Tümü</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Moda">Moda</option>
+            <option value="Ev & Yaşam">Ev & Yaşam</option>
+            <option value="Spor">Spor</option>
+            <option value="Diğer">Diğer</option>
+          </select>
+        </div>
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Ürün ara...">
+        </div>
+      </section>
+
+      <!-- Ürün Listesi -->
+      <section id="productList">
+        <!-- Ürünler buraya dinamik olarak eklenecek -->
+      </section>
+
+      <!-- Boş Durum Mesajı -->
+      <div id="emptyState" style="display: none;">
+        <p>Henüz hiç ürün paylaşılmamış. İlk ürünü sen paylaş!</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 BEUShareBox - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
+
